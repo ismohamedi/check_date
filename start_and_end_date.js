@@ -11,7 +11,7 @@ function checkDate(startDate, endDate) {
         if (((today.getMonth() + 1) < (startDate.getMonth() + 1)) && (today.getFullYear() > startDate.getFullYear())) {
             console.log("It was in last year")
             fullStartDate = today.getFullYear() - 1 + '-0' + (startDate.getMonth() + 1) + '-' + startDate.getDate()
-            fullEndDate = today.getFullYear() + '-0' + endDate.getMonth() + endDate.getDate()
+            fullEndDate = today.getFullYear() + '-0' + (endDate.getMonth()+1) + '-' + endDate.getDate()
 
         // check if the start date is on current TimeRanges, this year
         } else if (((today.getMonth() + 1) >= (startDate.getMonth() + 1)) && (today.getDate() >= startDate.getDate()) && (today.getFullYear() === startDate.getFullYear())) {
